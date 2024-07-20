@@ -4,7 +4,7 @@
 You are responsible for creating vue app with these criterias;
 
 - You are free to use one of the following apis -> https://github.com/public-apis/public-apis OR your own created back-end calls OR a resource you want to use yourself
-- The Project must have work with back-end calls. (-30 points in case of missing)
+- The Project must work with back-end calls. (-30 points in case of missing)
 - The Project must have at least three pages. (-5 points for each missing)
 - The Project must have at least five components (-5 points for each missing)
 - The Project must have responsive with all screen sizes (-20 points in case of missing)
