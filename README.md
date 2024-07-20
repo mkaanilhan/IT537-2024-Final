@@ -7,8 +7,8 @@ You are responsible for creating vue app with these criterias;
 - The Project must have work with back-end calls. (-30 points in case of missing)
 - The Project must have at least three pages. (-5 points for each missing)
 - The Project must have at least five components (-5 points for each missing)
-- The Project must have responsive with all screen sizes (-20 points for each missing)
-- You must use store management (pinia or others) (-10 points for each missing)
+- The Project must have responsive with all screen sizes (-20 points in case of missing)
+- You must use store management (pinia or others) (-10 points in case of missing)
 - Nuxt.js is not acceptable.
 - You are free to use either plain css or tailwind.
 - You are free to use either option api or composition api.
