@@ -54,19 +54,19 @@ export default {
 <template>
 <div>
     <div>
-        <GameHeader :gameIdProp="gameId" :gameNameProp="this.gameDetails[gameId].data.name" />
+        <GameHeader :gameIdProp="gameId" :gameNameProp="gameDetails[gameId].data.name" />
     </div>
-<div class="flex">
-    <div class="border-2 border-red-400 mx-2 w-72 h-96">
-        <GameImgCard :imageProp="this.gameDetails[gameId].data.header_image" />
-        <div class="my-2 mx-2">
-            {{gameDetails[gameId].data.short_description}}
+    <div class="flex">
+        <div class="border-2 border-red-400 mx-2 w-72 h-96">
+            <GameImgCard :imageProp="this.gameDetails[gameId].data.header_image" />
+            <div class="my-2 mx-2">
+                {{gameDetails[gameId].data.short_description}}
+            </div>
+        </div>
+        <div class="border-2 border-green-400 h-96 mr-2 w-full">
+            
         </div>
     </div>
-    <div class="border-2 border-green-400 h-96 mr-2 w-full">
-        
-    </div>
-</div>
     <div>
         <RouterLink :to="`/cartView`">
             <button class="text-2xl border-4 border-gray-800 bg-red-400 mx-2 my-2">Sepet</button>
