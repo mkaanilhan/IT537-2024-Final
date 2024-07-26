@@ -2,26 +2,30 @@
 import Header from "../components/Header.vue"
 import GameCard from "../components/GameCard.vue"
 export default {
-  data() {
-    return {
-      
-    }
-  },
-  components:{
-    Header,
-    GameCard
-  }
-}
+    data() {
+        return {
 
+        }
+    },
+    components: {
+        Header,
+        GameCard
+    }
+}
 </script>
 
 <template>
-<div>
-  <div>
-      <Header />
-  </div>
-  <div>
-      <GameCard />
-  </div>
+<div class="flex justify-start">
+    <div class="border border-blue-600 mx-2 my-2 w-8 md:w-16 lg:w-32 h-full">
+        <Header />
+    </div>
+    <div class="my-2 w-full mr-2">
+        <div class="h-64 border border-red-900 mb-2">
+
+        </div>
+        <div>
+            <GameCard />
+        </div>
+    </div>
 </div>
 </template>

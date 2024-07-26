@@ -34,10 +34,18 @@ export default {
 </script>
 
 <template>
-<div>
-    <div v-for="(game,index) in featuredInfo.featured_win" :key="index" class="p-2 border border-green-800 my-2 mx-2">
-        <RouterLink :to="`/${game.id}`">
-            <img :src="`${game.large_capsule_image}`" alt="">
+<div class="max-sm:grid-cols-1 max-lg:grid-cols-2 grid grid-cols-3 p-2 gap-2 w-full border border-green-600">
+    <div v-for="(game,index) in featuredInfo.featured_win" :key="index">
+        <RouterLink :to="`game/${game.id}`">
+            <img :src="`${game.large_capsule_image}`" alt="game" class="rounded-lg">
+            <div class="flex justify-between border border-blue-300 bg-sky-100">
+                <div class="bg-red-200">
+                    fiyat
+                </div>
+                <div class="bg-green-200">
+                    discount
+                </div>
+            </div>
         </RouterLink>
     </div>
 </div>
