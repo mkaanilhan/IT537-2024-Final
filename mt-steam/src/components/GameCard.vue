@@ -1,9 +1,11 @@
 <script>
+import { useGameStore } from "../stores/Game.js";
 export default {
     data() {
         return {
             featuredInfo: "",
             games: [],
+            store: useGameStore()
 
         }
     },
@@ -34,10 +36,10 @@ export default {
 </script>
 
 <template>
-<div class="max-sm:grid-cols-1 max-lg:grid-cols-2 grid grid-cols-3 p-2 gap-2 w-full border border-green-600">
+<div class="max-sm:grid-cols-1 max-lg:grid-cols-2 grid grid-cols-3 p-2 gap-2 w-full border-4 border-green-600">
     <div v-for="(game,index) in featuredInfo.featured_win" :key="index">
         <RouterLink :to="`game/${game.id}`">
-            <img :src="`${game.large_capsule_image}`" alt="game" class="rounded-lg">
+            <img :src="`${game.large_capsule_image}`" alt="game" class="rounded-lg hover:scale-105" :class="this.store.add(game.id,game.large_capsule_image)">
             <div class="flex justify-between border border-blue-300 bg-sky-100">
                 <div class="bg-red-200">
                     fiyat
