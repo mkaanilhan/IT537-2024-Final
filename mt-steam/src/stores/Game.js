@@ -37,11 +37,11 @@ export const useGameStore = defineStore('game', {
     addProduct(gameData){
       this.gameDataList.push(gameData)
     },
-    removeProduct(){
-
+    removeProductsFromCart(index){
+      this.gameDataList.splice(index,1)
     },
     removeAllProduct(){
-
+        this.gameDataList = []
     }
 
   },

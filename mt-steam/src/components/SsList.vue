@@ -46,7 +46,7 @@ export default {
 <div>
 
     <div class="border-2 border-orange-700 mx-2 my-2">
-        <img :src="`${this.pathFull}`" alt="path_thumbnail" class="w-full">
+        <img :src="`${this.pathFull}`" alt="path_thumbnail">
     </div>
 
     <div class="border-2 border-blue-700 mx-2 inline-block inline-flex w-32 h-24 cursor-pointer" v-for="(thumbnail,index) in ssList" :key="index" @click="showLgImg(thumbnail.path_full)">

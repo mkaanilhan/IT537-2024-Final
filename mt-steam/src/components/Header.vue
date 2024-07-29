@@ -10,11 +10,11 @@ export default {
 </script>
 
 <template>
-<div class="grid justify-start gap-4 items-items-center">
-    <div class="mx-0 border border-red-800">
-        <img src="https://img.icons8.com/?size=100&id=cMLQ2oh5S3TB&format=png&color=000000" alt="steam" class="w-6 md:w-12 lg:w-24">
-    </div>
-    <div class="border border-red-600 mx-0 lg:flex sm:grid items-center">
+<div class="grid justify-center gap-4">
+
+    <img src="https://img.icons8.com/?size=100&id=cMLQ2oh5S3TB&format=png&color=000000" alt="steam" class="w-6 md:w-12 lg:w-24 mx-auto mt-2">
+
+    <div class="mx-auto shadow-md rounded-lg p-2 lg:flex sm:grid items-center">
         <div>
             <img src="https://img.icons8.com/?size=100&id=14096&format=png&color=000000" alt="home" class="w-4 md:w-8 ">
         </div>
@@ -22,7 +22,8 @@ export default {
             Home
         </div>
     </div>
-    <div class="cursor-pointer border border-red-600 mx-0">
+
+    <div class="cursor-pointer mx-auto shadow-md rounded-lg p-2">
         <RouterLink to="/cartView" class="lg:flex sm:grid">
             <div>
                 <img src="https://img.icons8.com/?size=100&id=P6ZYIof6BwLW&format=png&color=000000" alt="home" class="w-4 md:w-8 ">
@@ -32,6 +33,7 @@ export default {
             </div>
         </RouterLink>
     </div>
+
     <div class="mt-96 mb-2 mx-2">
         <div class="flex items-center">
             <img src="https://img.icons8.com/?size=100&id=59996&format=png&color=000000" alt="steam" class="w-4 lg:w-8">
