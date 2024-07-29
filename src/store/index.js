@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
+// AniDB API ayarları
 const clientId = 'dogancanalperr'; 
-const clientVer = 1; 
+const clientVer = 1; // Aldığınız Client Version'ı buraya yerleştirin
 const protoVer = 1;
 
 export const useAnimeStore = defineStore('anime', {

@@ -1,31 +1,64 @@
 <template>
   <div>
     <h1>Search Anime</h1>
-    <input v-model="query" @keyup.enter="searchAnime" placeholder="Search for an anime..." />
-    <AnimeList :animes="animeList" />
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Search for anime..."
+      @input="searchAnimes"
+    />
+    <div v-if="searchResults.length">
+      <div v-for="anime in searchResults" :key="anime.mal_id" class="anime-card">
+        <h2>{{ anime.title }}</h2>
+        <p>{{ anime.synopsis }}</p>
+        <img :src="anime.images.jpg.image_url" alt="Anime Image" />
+      </div>
+    </div>
+    <div v-else>
+      <p>No results found or loading...</p>
+    </div>
   </div>
 </template>
 
 <script>
-import { useAnimeStore } from '../store/anime';
-import AnimeList from '../components/AnimeList.vue';
-import { ref } from 'vue';
+import axios from 'axios';
 
 export default {
-  components: {
-    AnimeList
-  },
-  setup() {
-    const store = useAnimeStore();
-    const query = ref('');
-    const searchAnime = () => {
-      store.searchAnime(query.value);
-    };
+  data() {
     return {
-      query,
-      searchAnime,
-      animeList: store.animeList
+      searchQuery: '',
+      searchResults: []
     };
+  },
+  methods: {
+    async searchAnimes() {
+      if (this.searchQuery.trim() === '') {
+        this.searchResults = [];
+        return;
+      }
+      try {
+        const response = await axios.get(
+          `https://api.jikan.moe/v4/anime?q=${this.searchQuery}`
+        );
+        this.searchResults = response.data.data;
+      } catch (error) {
+        console.error('Error searching animes:', error);
+      }
+    }
   }
-}
+};
 </script>
+
+<style>
+.anime-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.anime-card img {
+  max-width: 100%;
+  height: auto;
+}
+</style>

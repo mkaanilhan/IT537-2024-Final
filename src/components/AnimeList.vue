@@ -1,35 +1,54 @@
-<template>
-    <div>
-      <AnimeCard v-for="anime in animeList" :key="anime.id" :anime="anime" />
-    </div>
-  </template>
-  
-  <script>
-  import AnimeCard from './AnimeCard.vue';
-  import { useAnimeStore } from '@/store';
-  
-  export default {
-    name: 'AnimeList',
-    components: {
-      AnimeCard,
-    },
-    computed: {
-      animeList() {
-        const store = useAnimeStore();
-        return store.animeList;
-      },
-    },
-    created() {
-      const store = useAnimeStore();
-      store.fetchAnimeList();
-    },
-  };
-  </script>
-  
-  <style scoped>
-  div {
-    display: flex;
-    flex-wrap: wrap;
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      animes: []
+    };
+  },
+  created() {
+    this.fetchAnimes();
+  },
+  methods: {
+    async fetchAnimes() {
+      try {
+        const response = await axios.get('https://api.jikan.moe/v4/anime');
+        this.animes = response.data.data;
+      } catch (error) {
+        console.error('Error fetching animes:', error);
+      }
+    }
   }
-  </style>
-  
+};
+</script>
+
+<template>
+  <div>
+    <h1>Anime List</h1>
+    <div v-if="animes.length">
+      <div v-for="anime in animes" :key="anime.mal_id" class="anime-card">
+        <h2>{{ anime.title }}</h2>
+        <p>{{ anime.synopsis }}</p>
+        <img :src="anime.image_url" alt="Anime Image">
+      </div>
+    </div>
+    <div v-else>
+      <p>Loading...</p>
+    </div>
+  </div>
+</template>
+
+<style>
+.anime-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.anime-card img {
+  max-width: 100%;
+  height: auto;
+}
+</style>

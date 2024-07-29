@@ -1,25 +1,53 @@
 <template>
-  <div>
-    <h1>{{ animeDetails.title }}</h1>
-    <p>{{ animeDetails.description }}</p>
+  <div v-if="anime">
+    <h1>{{ anime.title }}</h1>
+    <img :src="anime.images.jpg.image_url" alt="Anime Image">
+    <p>{{ anime.synopsis }}</p>
+  </div>
+  <div v-else>
+    <p>Loading...</p>
   </div>
 </template>
 
 <script>
-import { useAnimeStore } from '../store/anime';
-import { onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import axios from 'axios';
 
 export default {
-  setup() {
-    const store = useAnimeStore();
-    const route = useRoute();
-    onMounted(() => {
-      store.fetchAnimeDetails(route.params.id);
-    });
+  data() {
     return {
-      animeDetails: store.animeDetails
+      anime: null
     };
+  },
+  created() {
+    this.fetchAnimeDetails();
+  },
+  methods: {
+    async fetchAnimeDetails() {
+      const id = this.$route.params.id;
+      try {
+        const response = await axios.get(`https://api.jikan.moe/v4/anime/${id}`);
+        this.anime = response.data.data;
+      } catch (error) {
+        console.error('Error fetching anime details:', error);
+      }
+    }
   }
-}
+};
 </script>
+
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  text-align: justify;
+}
+</style>
