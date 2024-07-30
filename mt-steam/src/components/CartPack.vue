@@ -12,7 +12,7 @@ export default {
 
 <template>
 
-<div class="text-sm flex border-2 border-orange-700 mx-2 my-2 justify-start">
+<div class="text-sm flex border-2 border-orange-600 mx-2 my-2 justify-start">
 
     <img :src="`${this.gameDataProp.capsule_imagev5}`" alt="capsuleImg">
 
