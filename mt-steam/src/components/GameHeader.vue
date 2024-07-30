@@ -14,7 +14,7 @@ export default {
 <template>
 <div class="bg-gradient-to-r from-cyan-500 to-sky-500 shadow-xl p-4 mx-2 rounded-lg flex justify-between items-center my-2">
     <div class="text-white text-2xl">
-        {{gameNameProp}} -- {{gameIdProp}}
+        {{gameNameProp}}
     </div>
     <div>
     <RouterLink to="/cartView" class="flex gap-2 items-center">
