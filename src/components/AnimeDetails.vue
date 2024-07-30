@@ -1,8 +1,12 @@
 <template>
   <div v-if="anime">
     <h1>{{ anime.title }}</h1>
-    <img :src="anime.images.jpg.image_url" alt="Anime Image">
     <p>{{ anime.synopsis }}</p>
+    <img :src="anime.images.jpg.image_url" alt="Anime Image" />
+    <p>Type: {{ anime.type }}</p>
+    <p>Episodes: {{ anime.episodes }}</p>
+    <p>Score: {{ anime.score }}</p>
+    <p>Members: {{ anime.members }}</p>
   </div>
   <div v-else>
     <p>Loading...</p>
@@ -10,44 +14,28 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
-  data() {
-    return {
-      anime: null
-    };
-  },
-  created() {
-    this.fetchAnimeDetails();
-  },
-  methods: {
-    async fetchAnimeDetails() {
-      const id = this.$route.params.id;
-      try {
-        const response = await axios.get(`https://api.jikan.moe/v4/anime/${id}`);
-        this.anime = response.data.data;
-      } catch (error) {
-        console.error('Error fetching anime details:', error);
-      }
+  props: {
+    anime: {
+      type: Object,
+      required: true
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+p {
+  margin-bottom: 0.5em;
+}
 img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-p {
-  text-align: justify;
+  margin-bottom: 1em;
 }
 </style>
