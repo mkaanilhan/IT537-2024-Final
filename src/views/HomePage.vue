@@ -11,7 +11,12 @@
     </header>
     <main class="main-content">
       <aside class="left-column">
+        <h3 style="color: red; font-weight: bold;">
+          &#x1F451; Photos from the best anime in history - BERSERK - &#x2694;
+        </h3>
         <img src="@/assets/guts.png" alt="Guts from Berserk" />
+        <img src="@/assets/guts2.png" alt="Guts from Berserk" />
+        <img src="@/assets/guts3.png" alt="Guts from Berserk" />
       </aside>
       <div class="content">
         <nav class="sub-nav-links">
@@ -61,6 +66,17 @@
             <li>Sci-Fi</li>
           </ul>
         </section>
+        <section class="statistics">
+          <h2>Anime Statistics</h2>
+          <ul>
+            <li>Most Watched Anime of 2023: <span style="color: blue;">Demon Slayer</span></li>
+            <li>Most Googled Anime of 2023: <span style="color: blue;">Attack on Titan</span></li>
+            <li>Highest Grossing Anime Movie of 2023: <span style="color: blue;">Demon Slayer: Mugen Train</span> ($500M)</li>
+            <li>Anime with Most Episodes: <span style="color: blue;">One Piece</span> (1000+ episodes)</li>
+            <li>Most Awarded Anime of 2023: <span style="color: blue;">My Hero Academia</span></li>
+            <li>Fastest Growing Anime Fandom: <span style="color: blue;">Jujutsu Kaisen</span></li>
+          </ul>
+        </section>
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
           <ul>
@@ -73,9 +89,9 @@
         </section>
         <section class="contact-info">
           <h3>Contact Information</h3>
-          <p>Phone: +90-123-456-7890</p>
+          <p>Phone: 0216 999 99 99</p>
           <p>Email: info@animedatabase.com</p>
-          <p>Address: 123 Anime Street, Istanbul, Turkey</p>
+          <p>Address: Central Street, Şile,İstanbul</p>
         </section>
       </div>
       <aside class="right-column">
@@ -98,6 +114,16 @@
         <div class="ad">
           <p>Ad 6: Get exclusive access to anime events and conventions with AnimePass!</p>
         </div>
+        <section class="upcoming-anime">
+          <h3 style="color: green; font-size: 1.5em;">Upcoming Anime</h3>
+          <ul>
+            <li>Future Adventures - August 2024</li>
+            <li>Robot Wars - September 2024</li>
+            <li>Galaxy Quest - October 2024</li>
+            <li>Magic Academy - November 2024</li>
+            <li>Dragon Warriors - December 2024</li>
+          </ul>
+        </section>
       </aside>
     </main>
     <footer>
@@ -162,6 +188,7 @@ header {
 .left-column img {
   width: 100%;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -169,7 +196,7 @@ header {
   margin: 0 20px;
 }
 
-.about-us, .anime-news, .genres, .faq, .contact-info, .ads {
+.about-us, .anime-news, .genres, .faq, .contact-info, .ads, .statistics {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
@@ -177,7 +204,7 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.about-us h2, .anime-news h2, .genres h2, .faq h2, .contact-info h3 {
+.about-us h2, .anime-news h2, .genres h2, .faq h2, .contact-info h3, .statistics h2 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -195,21 +222,21 @@ header {
   margin: 0;
 }
 
-.faq ul {
+.faq ul, .statistics ul, .upcoming-anime ul {
   list-style-type: none;
   padding: 0;
 }
 
-.faq ul li {
+.faq ul li, .statistics ul li, .upcoming-anime ul li {
   margin-bottom: 10px;
 }
 
-.faq ul li a {
+.faq ul li a, .statistics ul li a {
   color: #3498db;
   text-decoration: none;
 }
 
-.faq ul li a:hover {
+.faq ul li a:hover, .statistics ul li a:hover {
   text-decoration: underline;
 }
 
@@ -219,6 +246,14 @@ header {
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.right-column .upcoming-anime {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
 }
 
 .contact-info {
