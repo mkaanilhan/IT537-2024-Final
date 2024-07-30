@@ -3,26 +3,27 @@
     <header>
       <nav>
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/popular">Popular</a></li>
-          <li><a href="/search">Search</a></li>
-          <li><a href="#">Forum</a></li>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/popular">Popular</router-link></li>
+          <li><router-link to="/search">Search</router-link></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-content">
       <aside class="left-column">
-        <img src="https://cdn.myanimelist.net/images/anime/1421/106074.jpg" alt="Guts from Berserk">
+        <img src="@/assets/guts.png" alt="Guts from Berserk" />
       </aside>
       <div class="content">
+        <nav class="sub-nav-links">
+          <ul>
+            <li><router-link to="/forum">Forum</router-link></li>
+            <li><router-link to="/signup">Sign Up</router-link></li>
+            <li><router-link to="/login">Login</router-link></li>
+          </ul>
+        </nav>
         <section class="about-us">
           <h2>About Us</h2>
-          <p>
-            We are a dedicated platform providing comprehensive information about all anime series. 
-            Our mission is to connect anime fans worldwide.
-          </p>
+          <p>We are a dedicated platform providing comprehensive information about all anime series. Our mission is to connect anime fans worldwide.</p>
         </section>
         <section class="anime-news">
           <h2>Anime News</h2>
@@ -47,36 +48,59 @@
             <p><i>Studio Ghibli has announced the release of a new film, continuing its legacy of creating magical and heartwarming stories.</i></p>
           </article>
         </section>
+        <section class="genres">
+          <h2>Anime Genres</h2>
+          <ul>
+            <li>Action</li>
+            <li>Adventure</li>
+            <li>Comedy</li>
+            <li>Drama</li>
+            <li>Fantasy</li>
+            <li>Horror</li>
+            <li>Romance</li>
+            <li>Sci-Fi</li>
+          </ul>
+        </section>
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
           <ul>
-            <li><a href="#">How can I sign up?</a></li>
-            <li><a href="#">How can I reset my password?</a></li>
-            <li><a href="#">Where can I watch these animes?</a></li>
-            <li><a href="#">How can I contribute to the forum?</a></li>
+            <li><router-link to="/faq#question1">How can I sign up?</router-link></li>
+            <li><router-link to="/faq#question2">How can I reset my password?</router-link></li>
+            <li><router-link to="/faq#question3">Where can I watch these animes?</router-link></li>
+            <li><router-link to="/faq#question4">How can I contribute to the forum?</router-link></li>
+            <li><router-link to="/faq#question5">What are the site rules?</router-link></li>
           </ul>
+        </section>
+        <section class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Phone: +90-123-456-7890</p>
+          <p>Email: info@animedatabase.com</p>
+          <p>Address: 123 Anime Street, Istanbul, Turkey</p>
         </section>
       </div>
       <aside class="right-column">
         <h3>Advertisements</h3>
         <div class="ad">
-          <p>Ad 1: Check out the latest anime merchandise at AnimeMart!</p>
+          <p>Ad 1: Samsung S24 Ultra - Experience the Future!</p>
         </div>
         <div class="ad">
-          <p>Ad 2: Join our anime streaming service today at StreamAnime!</p>
+          <p>Ad 2: Toyota C-HR - Drive the Difference!</p>
         </div>
         <div class="ad">
-          <p>Ad 3: Get exclusive access to anime events and conventions with AnimePass!</p>
+          <p>Ad 3: Monster Laptop - Unleash the Beast!</p>
+        </div>
+        <div class="ad">
+          <p>Ad 4: Check out the latest anime merchandise at AnimeMart!</p>
+        </div>
+        <div class="ad">
+          <p>Ad 5: Join our anime streaming service today at StreamAnime!</p>
+        </div>
+        <div class="ad">
+          <p>Ad 6: Get exclusive access to anime events and conventions with AnimePass!</p>
         </div>
       </aside>
     </main>
     <footer>
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Phone: +90-123-456-7890</p>
-        <p>Email: info@animedatabase.com</p>
-        <p>Address: 123 Anime Street, Istanbul, Turkey</p>
-      </div>
       <p>&copy; 2024 Anime Database</p>
     </footer>
   </div>
@@ -87,7 +111,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -132,7 +156,7 @@ header {
 }
 
 .left-column, .right-column {
-  width: 200px;
+  width: 20%;
 }
 
 .left-column img {
@@ -145,7 +169,7 @@ header {
   margin: 0 20px;
 }
 
-.about-us, .anime-news, .faq {
+.about-us, .anime-news, .genres, .faq, .contact-info, .ads {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
@@ -153,7 +177,7 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.about-us h2, .anime-news h2, .faq h2 {
+.about-us h2, .anime-news h2, .genres h2, .faq h2, .contact-info h3 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -211,5 +235,26 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.sub-nav-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sub-nav-links li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.sub-nav-links a {
+  color: #8b4513; /* Kahverengi */
+  text-decoration: none;
+  font-style: italic;
+}
+
+.sub-nav-links a:hover {
+  text-decoration: underline;
 }
 </style>
