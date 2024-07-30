@@ -9,7 +9,8 @@ export default {
             name: "",
             cardNumber: "",
             expireDate: "",
-            cvv: ""
+            cvv: "",
+            freeToPlayPrice: 0
         }
     },
     methods: {
@@ -17,7 +18,11 @@ export default {
             let price = 0
             for (let index = 0; index < this.store.numberOfItem; index++) {
                 const element = this.store.gameDataList[index]
-                price += element.price_overview.final
+                if (element.is_free) {
+                    price += this.freeToPlayPrice
+                } else {
+                    price += element.price_overview.final
+                }
             }
             const formatter = new Intl.NumberFormat('en-US', {
                 style: 'currency',
@@ -79,8 +84,7 @@ export default {
             </div>
         </div>
 
-        <div class="products flex justify-between shadow-md rounded-lg gap-2 my-2 mx-2 items-center hover:bg-green-100" 
-        v-for="(game,index) in this.store.gameDataList" :key="index">
+        <div class="products flex justify-between shadow-md rounded-lg gap-2 my-2 mx-2 items-center hover:bg-green-100" v-for="(game,index) in this.store.gameDataList" :key="index">
 
             <div class="flex justify-start items-center gap-2">
                 <div class="capsuleImg max-sm:w-24 h-16 content-center">
@@ -93,18 +97,23 @@ export default {
 
             <div class="flex items-center justify-end gap-4">
 
-                <div class="priceInfo flex gap-2 items-center justify-between">
-                    <div class="discount max-lg:text-xs max-md:hidden" v-if="game.price_overview.discount_percent!==0">
-                        Discount: %{{game.price_overview.discount_percent}}
-                    </div>
-                    <div class="inline-grid px-2 max-lg:text-xs">
-                        <div class="price line-through text-xs">
-                            {{game.price_overview.initial_formatted}}
+                <div v-if="!game.is_free">
+                    <div class="priceInfo flex gap-2 items-center justify-between">
+                        <div class="discount max-lg:text-xs max-md:hidden" v-if="game.price_overview.discount_percent!==0">
+                            Discount: %{{game.price_overview.discount_percent}}
                         </div>
-                        <div class="finalPrice ">
-                            {{game.price_overview.final_formatted}}
+                        <div class="inline-grid px-2 max-lg:text-xs">
+                            <div class="price line-through text-xs">
+                                {{game.price_overview.initial_formatted}}
+                            </div>
+                            <div class="finalPrice ">
+                                {{game.price_overview.final_formatted}}
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div v-else>
+                        {{freeToPlayPrice}}€
                 </div>
 
                 <div class="flex mr-2 text-xs gap-2">

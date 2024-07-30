@@ -12,7 +12,7 @@ export default {
 }
 </script>
 <template>
-<div class="bg-gray-400 p-4 mx-2 mb-2 rounded-lg flex justify-between items-center">
+<div class="bg-gradient-to-r from-cyan-500 to-sky-500 shadow-xl p-4 mx-2 rounded-lg flex justify-between items-center my-2">
     <div class="text-white text-2xl">
         {{gameNameProp}} -- {{gameIdProp}}
     </div>

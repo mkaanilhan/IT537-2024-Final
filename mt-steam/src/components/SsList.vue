@@ -6,18 +6,18 @@ export default {
     props: ["gameIdProp"],
     data() {
         return {
-            gameDetails:[],
+            gameDetails: [],
             store: useGameStore(),
             ssList: [],
-            pathFull:"",
+            pathFull: "",
 
         }
     },
     methods: {
-        showLgImg(linkValue){
+        showLgImg(linkValue) {
             this.pathFull = linkValue
         }
-        
+
     },
     async created() {
 
@@ -45,12 +45,14 @@ export default {
 <template>
 <div>
 
-    <div class="border-2 border-orange-700 mx-2 my-2">
-        <img :src="`${this.pathFull}`" alt="path_thumbnail">
+    <div class="max-h-96 shadow-lg my-2 mx-2 overflow-y-auto rounded-lg max-sm:hover:scale-110">
+        <div >
+            <img :src="`${this.pathFull}`" alt="pathFull" class="rounded-lg">
+        </div>
     </div>
 
-    <div class="border-2 border-blue-700 mx-2 inline-block inline-flex w-32 h-24 cursor-pointer" v-for="(thumbnail,index) in ssList" :key="index" @click="showLgImg(thumbnail.path_full)">
-        <img :src="`${thumbnail.path_thumbnail}`" alt="path_thumbnail">
+    <div class="shadow-lg rounded-lg mx-2 inline-flex content-end max-h-24 max-w-24 cursor-pointer" v-for="(thumbnail,index) in ssList" :key="index" @click="showLgImg(thumbnail.path_full)">
+        <img :src="`${thumbnail.path_thumbnail}`" alt="path_thumbnail" class="rounded-lg hover:motion-safe:animate-spin">
     </div>
 
 </div>

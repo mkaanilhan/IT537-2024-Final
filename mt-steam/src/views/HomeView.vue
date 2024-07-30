@@ -20,9 +20,6 @@ export default {
         <Header />
     </div>
     <div class="my-2 w-full mr-2">
-        <div class="h-64 shadow-xl mb-2">
-            Live Stream
-        </div>
         <div class="shadow-xl">
             <GameCard />
         </div>
