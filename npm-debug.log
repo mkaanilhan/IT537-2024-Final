@@ -1,0 +1,359 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/bin/node',
+1 verbose cli   '/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'lodash' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData lodash@^4.17.21
+8 silly fetchNamedPackageData lodash
+9 silly mapToRegistry name lodash
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'lodash',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'lodash',
+12 silly mapToRegistry   name: 'lodash',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/lodash
+14 verbose request uri https://registry.npmjs.org/lodash
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 8:06:38 PM
+17 verbose request id 190d2b2f0dbef037
+18 http request GET https://registry.npmjs.org/lodash
+19 http 200 https://registry.npmjs.org/lodash
+20 verbose headers { date: 'Wed, 31 Jul 2024 17:06:39 GMT',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'transfer-encoding': 'chunked',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'cf-ray': '8abf2e21ec630533-OTP',
+20 verbose headers   'cf-cache-status': 'HIT',
+20 verbose headers   'access-control-allow-origin': '*',
+20 verbose headers   age: '40',
+20 verbose headers   'cache-control': 'public, max-age=300',
+20 verbose headers   etag: 'W/"aec2e0d8eff56659077c476e7d4da4f5"',
+20 verbose headers   'last-modified': 'Sat, 13 Jul 2024 08:21:45 GMT',
+20 verbose headers   vary: 'accept-encoding, accept',
+20 verbose headers   server: 'cloudflare',
+20 verbose headers   'content-encoding': 'gzip' }
+21 silly get cb [ 200,
+21 silly get   { date: 'Wed, 31 Jul 2024 17:06:39 GMT',
+21 silly get     'content-type': 'application/json',
+21 silly get     'transfer-encoding': 'chunked',
+21 silly get     connection: 'keep-alive',
+21 silly get     'cf-ray': '8abf2e21ec630533-OTP',
+21 silly get     'cf-cache-status': 'HIT',
+21 silly get     'access-control-allow-origin': '*',
+21 silly get     age: '40',
+21 silly get     'cache-control': 'public, max-age=300',
+21 silly get     etag: 'W/"aec2e0d8eff56659077c476e7d4da4f5"',
+21 silly get     'last-modified': 'Sat, 13 Jul 2024 08:21:45 GMT',
+21 silly get     vary: 'accept-encoding, accept',
+21 silly get     server: 'cloudflare',
+21 silly get     'content-encoding': 'gzip' } ]
+22 verbose get saving lodash to /Users/hakankarayilmaz/.npm/registry.npmjs.org/lodash/.cache.json
+23 verbose correctMkdir /Users/hakankarayilmaz/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule lodash@4.17.21 checking installable status
+37 silly cache add args [ 'lodash@^4.17.21', null ]
+38 verbose cache add spec lodash@^4.17.21
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'lodash@^4.17.21',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'lodash',
+39 silly cache add   name: 'lodash',
+39 silly cache add   rawSpec: '^4.17.21',
+39 silly cache add   spec: '>=4.17.21 <5.0.0',
+39 silly cache add   type: 'range' }
+40 silly addNamed lodash@>=4.17.21 <5.0.0
+41 verbose addNamed ">=4.17.21 <5.0.0" is a valid semver range for lodash
+42 silly addNameRange { name: 'lodash', range: '>=4.17.21 <5.0.0', hasData: false }
+43 silly mapToRegistry name lodash
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'lodash',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'lodash',
+46 silly mapToRegistry   name: 'lodash',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/lodash
+48 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+49 verbose get https://registry.npmjs.org/lodash not expired, no request
+50 silly addNameRange number 2 { name: 'lodash', range: '>=4.17.21 <5.0.0', hasData: true }
+51 silly addNameRange versions [ 'lodash',
+51 silly addNameRange   [ '0.1.0',
+51 silly addNameRange     '0.2.0',
+51 silly addNameRange     '0.2.1',
+51 silly addNameRange     '0.2.2',
+51 silly addNameRange     '0.3.0',
+51 silly addNameRange     '0.3.1',
+51 silly addNameRange     '0.3.2',
+51 silly addNameRange     '0.4.0',
+51 silly addNameRange     '0.4.1',
+51 silly addNameRange     '0.4.2',
+51 silly addNameRange     '0.5.0-rc.1',
+51 silly addNameRange     '0.5.0',
+51 silly addNameRange     '0.5.1',
+51 silly addNameRange     '0.5.2',
+51 silly addNameRange     '0.6.0',
+51 silly addNameRange     '0.6.1',
+51 silly addNameRange     '0.7.0',
+51 silly addNameRange     '0.8.0',
+51 silly addNameRange     '0.8.1',
+51 silly addNameRange     '0.8.2',
+51 silly addNameRange     '0.9.0',
+51 silly addNameRange     '0.9.1',
+51 silly addNameRange     '0.9.2',
+51 silly addNameRange     '0.10.0',
+51 silly addNameRange     '1.0.0-rc.1',
+51 silly addNameRange     '1.0.0-rc.2',
+51 silly addNameRange     '1.0.0-rc.3',
+51 silly addNameRange     '1.0.0',
+51 silly addNameRange     '1.0.1',
+51 silly addNameRange     '1.1.0',
+51 silly addNameRange     '1.1.1',
+51 silly addNameRange     '1.2.0',
+51 silly addNameRange     '1.2.1',
+51 silly addNameRange     '1.3.0',
+51 silly addNameRange     '1.3.1',
+51 silly addNameRange     '2.0.0',
+51 silly addNameRange     '2.1.0',
+51 silly addNameRange     '2.2.0',
+51 silly addNameRange     '2.2.1',
+51 silly addNameRange     '2.3.0',
+51 silly addNameRange     '2.4.0',
+51 silly addNameRange     '2.4.1',
+51 silly addNameRange     '3.0.0',
+51 silly addNameRange     '3.0.1',
+51 silly addNameRange     '3.1.0',
+51 silly addNameRange     '3.2.0',
+51 silly addNameRange     '3.3.0',
+51 silly addNameRange     '3.3.1',
+51 silly addNameRange     '3.4.0',
+51 silly addNameRange     '3.5.0',
+51 silly addNameRange     '3.6.0',
+51 silly addNameRange     '1.0.2',
+51 silly addNameRange     '3.7.0',
+51 silly addNameRange     '2.4.2',
+51 silly addNameRange     '3.8.0',
+51 silly addNameRange     '3.9.0',
+51 silly addNameRange     '3.9.1',
+51 silly addNameRange     '3.9.2',
+51 silly addNameRange     '3.9.3',
+51 silly addNameRange     '3.10.0',
+51 silly addNameRange     '3.10.1',
+51 silly addNameRange     '4.0.0',
+51 silly addNameRange     '4.0.1',
+51 silly addNameRange     '4.1.0',
+51 silly addNameRange     '4.2.0',
+51 silly addNameRange     '4.2.1',
+51 silly addNameRange     '4.3.0',
+51 silly addNameRange     '4.4.0',
+51 silly addNameRange     '4.5.0',
+51 silly addNameRange     '4.5.1',
+51 silly addNameRange     '4.6.0',
+51 silly addNameRange     '4.6.1',
+51 silly addNameRange     '4.7.0',
+51 silly addNameRange     '4.8.0',
+51 silly addNameRange     '4.8.1',
+51 silly addNameRange     '4.8.2',
+51 silly addNameRange     '4.9.0',
+51 silly addNameRange     '4.10.0',
+51 silly addNameRange     '4.11.0',
+51 silly addNameRange     '4.11.1',
+51 silly addNameRange     '4.11.2',
+51 silly addNameRange     '4.12.0',
+51 silly addNameRange     '4.13.0',
+51 silly addNameRange     '4.13.1',
+51 silly addNameRange     '4.14.0',
+51 silly addNameRange     '4.14.1',
+51 silly addNameRange     '4.14.2',
+51 silly addNameRange     '4.15.0',
+51 silly addNameRange     '4.16.0',
+51 silly addNameRange     '4.16.1',
+51 silly addNameRange     '4.16.2',
+51 silly addNameRange     '4.16.3',
+51 silly addNameRange     '4.16.4',
+51 silly addNameRange     '4.16.5',
+51 silly addNameRange     '4.16.6',
+51 silly addNameRange     '4.17.0',
+51 silly addNameRange     '4.17.1',
+51 silly addNameRange     '4.17.2',
+51 silly addNameRange     '4.17.3',
+51 silly addNameRange     '4.17.4',
+51 silly addNameRange     ... 14 more items ] ]
+52 silly addNamed lodash@4.17.21
+53 verbose addNamed "4.17.21" is a plain semver version for lodash
+54 silly mapToRegistry name lodash
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry data Result {
+57 silly mapToRegistry   raw: 'lodash',
+57 silly mapToRegistry   scope: null,
+57 silly mapToRegistry   escapedName: 'lodash',
+57 silly mapToRegistry   name: 'lodash',
+57 silly mapToRegistry   rawSpec: '',
+57 silly mapToRegistry   spec: 'latest',
+57 silly mapToRegistry   type: 'tag' }
+58 silly mapToRegistry uri https://registry.npmjs.org/lodash
+59 verbose addRemoteTarball https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz not in flight; adding
+60 verbose addRemoteTarball [ 'https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz',
+60 verbose addRemoteTarball   '679591c564c3bffaae8454cf0b3df370c3d6911c' ]
+61 info retry fetch attempt 1 at 8:06:39 PM
+62 info attempt registry request try #1 at 8:06:39 PM
+63 http fetch GET https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz
+64 http fetch 200 https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz
+65 silly fetchAndShaCheck shasum 679591c564c3bffaae8454cf0b3df370c3d6911c
+66 verbose addTmpTarball /var/folders/wk/kwfx4mb15p1dpslqkvhcl90c0000gn/T/npm-85835-a3eb2d21/registry.npmjs.org/lodash/-/lodash-4.17.21.tgz not in flight; adding
+67 verbose addTmpTarball already have metadata; skipping unpack for lodash@4.17.21
+68 verbose correctMkdir /Users/hakankarayilmaz/.npm correctMkdir not in flight; initializing
+69 silly cache afterAdd lodash@4.17.21
+70 verbose afterAdd /Users/hakankarayilmaz/.npm/lodash/4.17.21/package/package.json not in flight; writing
+71 verbose correctMkdir /Users/hakankarayilmaz/.npm correctMkdir not in flight; initializing
+72 verbose afterAdd /Users/hakankarayilmaz/.npm/lodash/4.17.21/package/package.json written
+73 silly fetchNamedPackageData strip-ansi
+74 silly mapToRegistry name strip-ansi
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: 'strip-ansi',
+77 silly mapToRegistry   scope: null,
+77 silly mapToRegistry   escapedName: 'strip-ansi',
+77 silly mapToRegistry   name: 'strip-ansi',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+79 verbose request uri https://registry.npmjs.org/strip-ansi
+80 verbose request no auth needed
+81 info attempt registry request try #1 at 8:06:40 PM
+82 verbose etag W/"ac0377b2d4e7fbe4eea84e483222d0a5"
+83 verbose lastModified Sun, 28 May 2023 09:55:05 GMT
+84 http request GET https://registry.npmjs.org/strip-ansi
+85 http 304 https://registry.npmjs.org/strip-ansi
+86 verbose headers { date: 'Wed, 31 Jul 2024 17:06:40 GMT',
+86 verbose headers   connection: 'keep-alive',
+86 verbose headers   'cf-ray': '8abf2e2cb9680533-OTP',
+86 verbose headers   'cf-cache-status': 'HIT',
+86 verbose headers   'access-control-allow-origin': '*',
+86 verbose headers   age: '112',
+86 verbose headers   'cache-control': 'public, max-age=300',
+86 verbose headers   etag: '"ac0377b2d4e7fbe4eea84e483222d0a5"',
+86 verbose headers   'last-modified': 'Sun, 28 May 2023 09:55:05 GMT',
+86 verbose headers   vary: 'Accept-Encoding',
+86 verbose headers   server: 'cloudflare' }
+87 silly get cb [ 304,
+87 silly get   { date: 'Wed, 31 Jul 2024 17:06:40 GMT',
+87 silly get     connection: 'keep-alive',
+87 silly get     'cf-ray': '8abf2e2cb9680533-OTP',
+87 silly get     'cf-cache-status': 'HIT',
+87 silly get     'access-control-allow-origin': '*',
+87 silly get     age: '112',
+87 silly get     'cache-control': 'public, max-age=300',
+87 silly get     etag: '"ac0377b2d4e7fbe4eea84e483222d0a5"',
+87 silly get     'last-modified': 'Sun, 28 May 2023 09:55:05 GMT',
+87 silly get     vary: 'Accept-Encoding',
+87 silly get     server: 'cloudflare' } ]
+88 verbose etag https://registry.npmjs.org/strip-ansi from cache
+89 verbose get saving strip-ansi to /Users/hakankarayilmaz/.npm/registry.npmjs.org/strip-ansi/.cache.json
+90 verbose correctMkdir /Users/hakankarayilmaz/.npm correctMkdir not in flight; initializing
+91 silly resolveWithNewModule strip-ansi@7.1.0 checking installable status
+92 silly cache add args [ 'strip-ansi@^7.0.1', null ]
+93 verbose cache add spec strip-ansi@^7.0.1
+94 silly cache add parsed spec Result {
+94 silly cache add   raw: 'strip-ansi@^7.0.1',
+94 silly cache add   scope: null,
+94 silly cache add   escapedName: 'strip-ansi',
+94 silly cache add   name: 'strip-ansi',
+94 silly cache add   rawSpec: '^7.0.1',
+94 silly cache add   spec: '>=7.0.1 <8.0.0',
+94 silly cache add   type: 'range' }
+95 silly addNamed strip-ansi@>=7.0.1 <8.0.0
+96 verbose addNamed ">=7.0.1 <8.0.0" is a valid semver range for strip-ansi
+97 silly addNameRange { name: 'strip-ansi', range: '>=7.0.1 <8.0.0', hasData: false }
+98 silly mapToRegistry name strip-ansi
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry data Result {
+101 silly mapToRegistry   raw: 'strip-ansi',
+101 silly mapToRegistry   scope: null,
+101 silly mapToRegistry   escapedName: 'strip-ansi',
+101 silly mapToRegistry   name: 'strip-ansi',
+101 silly mapToRegistry   rawSpec: '',
+101 silly mapToRegistry   spec: 'latest',
+101 silly mapToRegistry   type: 'tag' }
+102 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+103 verbose addNameRange registry:https://registry.npmjs.org/strip-ansi not in flight; fetching
+104 verbose get https://registry.npmjs.org/strip-ansi not expired, no request
+105 silly addNameRange number 2 { name: 'strip-ansi', range: '>=7.0.1 <8.0.0', hasData: true }
+106 silly addNameRange versions [ 'strip-ansi',
+106 silly addNameRange   [ '0.1.0',
+106 silly addNameRange     '0.1.1',
+106 silly addNameRange     '0.2.0',
+106 silly addNameRange     '0.2.1',
+106 silly addNameRange     '0.2.2',
+106 silly addNameRange     '0.3.0',
+106 silly addNameRange     '1.0.0',
+106 silly addNameRange     '2.0.0',
+106 silly addNameRange     '2.0.1',
+106 silly addNameRange     '3.0.0',
+106 silly addNameRange     '3.0.1',
+106 silly addNameRange     '4.0.0',
+106 silly addNameRange     '5.0.0',
+106 silly addNameRange     '5.1.0',
+106 silly addNameRange     '5.2.0',
+106 silly addNameRange     '6.0.0',
+106 silly addNameRange     '7.0.0',
+106 silly addNameRange     '7.0.1',
+106 silly addNameRange     '6.0.1',
+106 silly addNameRange     '7.1.0' ] ]
+107 silly addNamed strip-ansi@7.1.0
+108 verbose addNamed "7.1.0" is a plain semver version for strip-ansi
+109 silly cache afterAdd strip-ansi@7.1.0
+110 verbose afterAdd /Users/hakankarayilmaz/.npm/strip-ansi/7.1.0/package/package.json not in flight; writing
+111 verbose correctMkdir /Users/hakankarayilmaz/.npm correctMkdir not in flight; initializing
+112 verbose afterAdd /Users/hakankarayilmaz/.npm/strip-ansi/7.1.0/package/package.json written
+113 silly rollbackFailedOptional Starting
+114 silly rollbackFailedOptional Finishing
+115 silly runTopLevelLifecycles Finishing
+116 silly install printInstalled
+117 verbose stack Error: Unsupported URL Type: npm:string-width@^4.2.0
+117 verbose stack     at parseUrl (/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/node_modules/npm-package-arg/npa.js:186:13)
+117 verbose stack     at npa (/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/node_modules/npm-package-arg/npa.js:79:12)
+117 verbose stack     at module.exports (/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/node_modules/realize-package-specifier/index.js:12:15)
+117 verbose stack     at childDependencySpecifier (/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/lib/install/deps.js:104:3)
+117 verbose stack     at addDependency (/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/lib/install/deps.js:442:3)
+117 verbose stack     at /Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/lib/install/deps.js:401:5
+117 verbose stack     at /Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+117 verbose stack     at Array.forEach (native)
+117 verbose stack     at /Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+117 verbose stack     at Array.forEach (native)
+118 verbose cwd /Users/hakankarayilmaz/GitHub/blogs-app
+119 error Darwin 23.4.0
+120 error argv "/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/bin/node" "/Users/hakankarayilmaz/.nvm/versions/node/v6.14.4/bin/npm" "i" "lodash"
+121 error node v6.14.4
+122 error npm  v3.10.10
+123 error Unsupported URL Type: npm:string-width@^4.2.0
+124 error If you need help, you may report this error at:
+124 error     <https://github.com/npm/npm/issues>
+125 verbose exit [ 1, true ]
