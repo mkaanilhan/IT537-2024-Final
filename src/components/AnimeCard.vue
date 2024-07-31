@@ -1,9 +1,10 @@
 <template>
   <div class="anime-card">
-    <img :src="anime.image_url" alt="Anime Image" class="anime-image">
+    <img :src="anime.images.jpg.image_url" alt="Anime Image" class="anime-image">
     <div class="anime-info">
       <h3>{{ anime.title }}</h3>
       <p>{{ anime.synopsis }}</p>
+      <router-link :to="{ name: 'AnimeDetails', params: { id: anime.mal_id } }" class="details-link">View Details</router-link>
     </div>
   </div>
 </template>
@@ -36,5 +37,16 @@ export default {
 
 .anime-info {
   text-align: center;
+}
+
+.details-link {
+  color: #3498db;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.details-link:hover {
+  text-decoration: underline;
 }
 </style>
