@@ -22,7 +22,7 @@
 
     export default{
 
-        name:"List",
+        name:"StockListComponent",
 
         props: {
             index: {required: true},
@@ -32,12 +32,6 @@
 
         components: {
             StockRowComponent
-        },
-
-        data() {
-            return {
-            stocks: [{name:'AAPL'}, {name:'MSFT'}]
-            }
         },
 
         methods: {

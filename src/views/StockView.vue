@@ -74,7 +74,6 @@
             },
 
             async fetchQuote() {
-                const finnURL = this.$finnURL
                 const response = await fetch(`${this.$finnURL}/quote?symbol=${this.symbol}&token=${this.apiKey}`)
                 const data = await response.json()
                 this.stockData.quote = data

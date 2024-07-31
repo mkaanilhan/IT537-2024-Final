@@ -7,7 +7,7 @@
                         <img src="../icons/7013430_finance_bank_piggy_business_money_icon.svg" alt="Piggy" class="w-16">
                     </div>
                     <div class="text-xl">
-                        My Portfolio
+                        InvestMate
                     </div>
                 </div>
             </router-link>  

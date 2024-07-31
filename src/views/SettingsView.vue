@@ -22,9 +22,10 @@
 
   <!-- API Key Updater -->
   <div class="flex p-8 justify-center w-full">
-    <div>
+    <div class="tooltip-container">
       <label for="api-key" class="font-semibold">API Key:</label>
       <input id="api-key" v-model="apiKey" type="text" class="mx-4 text-lite-text bg-dimmed-text py-0.5 w-48 sm:w-80" />
+      <span class="tooltip-text">Enter your API key from the <a href="https://finnhub.io/dashboard">Finnhub dashboard</a></span>
       <button class="bg-dimmed-text/50 rounded px-2 py-0.5 hover:bg-head-text hover:text-dark-back" @click="saveApiKey">Update</button>
     </div>
   </div>
@@ -68,7 +69,7 @@
     },
     data() {
       return {
-        newPortfolioName: ''
+        newPortfolio: ''
       };
     },
     components: {
@@ -80,8 +81,51 @@
       },
       addPortfolio(newPortfolio){
         this.addPortfolio(newPortfolio)
-
+        this.newPortfolio=''
       }
     }
   };
 </script>
+
+
+<style>
+
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -110px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+</style>

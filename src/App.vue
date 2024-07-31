@@ -4,7 +4,7 @@
 
     export default{
 
-        name:"YAPA",
+        name:"InvestMate",
 
         components: {
             HeaderComponent,
