@@ -21,7 +21,10 @@
     <ul class="list-disc px-8">
       <li>View and manage multiple portfolios</li>
       <li>Add and remove stocks from your portfolios</li>
-      <li>Fetch and display stock information from the <a class="text-head-text" href="https://finnhub.io/docs/api">Finnhub API</a> including recommendation trends</li>
+      <li>Fetch and display stock information from the 
+        <a class="text-head-text" href="https://finnhub.io/docs/api" target="_blank" rel="noopener noreferrer">
+          Finnhub API</a> 
+          including recommendation trends</li>
       <li>View recent insider transactions and company news</li>
       <li>Responsive design for all screen sizes</li>
     </ul>

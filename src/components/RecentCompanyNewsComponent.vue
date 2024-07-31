@@ -12,7 +12,7 @@
         <div class="px-8">
             <div v-for="(article, index) in paginatedNews" :key="article.id" class="my-8">
                 <div class="flex items-center mb-2">
-                    <img :src="article.image" :alt="article.headline" class="w-24 h-24 mr-4">
+                    <img :src="article.image" alt="Image" class="w-24 h-24 mr-4">
                     <div>
                         <a :href="article.url" target="_blank" class="text-hilite-text hover:underline text-lg font-bold">{{ article.headline }}</a>
                         <p class="text-sm text-dimmed-text">{{ article.source }} - {{ new Date(article.datetime * 1000).toLocaleDateString() }}</p>

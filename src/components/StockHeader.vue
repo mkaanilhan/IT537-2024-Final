@@ -5,7 +5,9 @@
         <img :src="this.stockData.profile.logo" :alt="this.stockData.profile.name" class="w-14 h-14"> 
         <div>
           <p class="text-3xl"> {{ this.stockData.profile.name }} ({{ this.stockData.profile.ticker }}) </p>
-          <a :href="this.stockData.profile.weburl" target="_blank" class="text-blue-500 hover:underline">{{ this.stockData.profile.weburl }}</a>
+          <a :href="this.stockData.profile.weburl" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">
+            {{ this.stockData.profile.weburl }}
+          </a>
         </div>
       </div>
       <div class="flex flex-col gap-2 text-head-text text-right texl-xl">
