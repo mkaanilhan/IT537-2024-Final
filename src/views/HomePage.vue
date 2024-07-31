@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header-component></header-component>
     <main class="main-content">
       <aside class="left-column">
         <h2>📌 Photos from the best anime in history <router-link to="/anime/33" class="berserk-link">BERSERK</router-link> 👑</h2>
@@ -118,12 +117,10 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
   components: {
-    HeaderComponent,
     FooterComponent,
   },
 };
@@ -136,34 +133,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-links li {
-  list-style: none;
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
 }
 
 .main-content {
@@ -267,7 +236,7 @@ footer {
 }
 
 .sub-nav-links a {
-  color: #8b4513; /* Kahverengi */
+  color: #8b4513; 
   text-decoration: none;
   font-style: italic;
 }
