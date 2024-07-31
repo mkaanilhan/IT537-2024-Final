@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "strict": true,
+      "jsx": "preserve",
+      "importHelpers": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "lib": ["ESNext", "DOM"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "vueCompilerOptions": {
+      "plugins": ["@vue/language-plugin-pug"]
+    },
+    "exclude": ["node_modules", "dist"]
+  }
+  
