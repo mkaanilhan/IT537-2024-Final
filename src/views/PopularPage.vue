@@ -3,7 +3,9 @@
     <h1>Popular Anime</h1>
     <div v-if="popularAnimes.length">
       <div v-for="anime in popularAnimes" :key="anime.mal_id" class="anime-card">
-        <h2>{{ anime.title }}</h2>
+        <h2>
+          <router-link :to="{ name: 'AnimeDetails', params: { id: anime.mal_id } }">{{ anime.title }}</router-link>
+        </h2>
         <p>{{ anime.synopsis }}</p>
         <img :src="anime.images.jpg.image_url" alt="Anime Image">
       </div>
