@@ -8,7 +8,7 @@
           :key="weather.location.name"
           :weather="weather"
         />
-        <div v-if="!loading && weathers.length === 0" class="text-center w-full">Veri bulunamadı</div>
+        
         <div v-if="loading" class="text-center w-full">Yükleniyor...</div>
         <div v-if="error" class="text-center w-full text-red-500">{{ error }}</div>
       </div>
