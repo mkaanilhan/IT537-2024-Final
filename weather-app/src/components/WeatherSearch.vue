@@ -1,26 +1,41 @@
 <template>
-    <div class="mb-4">
-      <input v-model="query" @keyup.enter="searchWeather" placeholder="Şehir adı girin..." class="p-2 border rounded-lg w-full" />
-      <button @click="searchWeather" class="bg-blue-500 text-white p-2 rounded-lg mt-2 w-full">Ara</button>
-    </div>
-  </template>
-  
-  <script>
-  import { useWeatherStore } from '@/stores/weatherStore';
-  
-  export default {
-    name: 'WeatherSearch',
-    data() {
-      return {
-        query: '',
-      };
-    },
-    methods: {
-      searchWeather() {
-        const store = useWeatherStore();
-        store.fetchWeather(this.query);
-      },
-    },
-  };
-  </script>
-  
+  <div class="flex justify-center items-center">
+    <input
+      v-model="city"
+      @keyup.enter="searchWeather"
+      type="text"
+      placeholder="Şehir adı girin..."
+      class="p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      @click="searchWeather"
+      class="p-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      Ara
+    </button>
+  </div>
+</template>
+
+<script>
+import { useWeatherStore } from '@/stores/weatherStore';
+import { ref } from 'vue';
+
+export default {
+  name: 'WeatherSearch',
+  setup() {
+    const store = useWeatherStore();
+    const city = ref('');
+
+    const searchWeather = () => {
+      if (city.value.trim() !== '') {
+        store.fetchWeather(city.value.trim());
+      }
+    };
+
+    return {
+      city,
+      searchWeather,
+    };
+  },
+};
+</script>
